@@ -1,8 +1,108 @@
-This is the *My First Project with Java* project I made myself.
+# Java CLI Net Income Calculator
 
+A simple command-line Java application that calculates monthly net income for a small shop.  
+The program takes item revenues, staff expenses, and other costs as input and outputs the final net profit for the month.
 
-<p>Imagine that you're the owner of a new small corner shop. You are doing well and want to determine how much you earned in the first month. Create a simple tool that will calculate your net income. Upon completing this project, you can use this tool for your own accounting needs.</p><br/><br/>Learn more at <a href="https://hyperskill.org/projects/380?utm_source=ide&utm_medium=ide&utm_campaign=ide&utm_content=project-card">https://hyperskill.org/projects/380</a>
+---
 
-Here's the link to the project: https://hyperskill.org/projects/380
+## 🚀 Features
 
-Check out my profile: https://hyperskill.org/profile/626202635
+- Read revenues of multiple items
+- Read staff salary expenses
+- Read operational expenses
+- Calculate total income
+- Calculate total expenses
+- Compute final net income
+- Display formatted output in the console
+
+---
+
+## 📦 Project Structure
+
+```
+My First Project with Java/
+└── task/
+    └── src/
+        └── calculator/
+            ├── Main.java
+            └── IncomeCalculator.java
+```
+
+---
+
+## 📌 How It Works
+
+### 1️⃣ User inputs:
+- Product revenues
+- Staff salaries
+- Other expenses
+
+### 2️⃣ Program processes values:
+```java
+int netIncome = totalRevenue - (staffExpenses + otherExpenses);
+```
+
+### 3️⃣ Final result is printed:
+```
+Net Income for this month: $X
+```
+
+---
+
+## 🧠 Example Code (Main.java)
+
+```java
+public class Main {
+    public static void main(String[] args) {
+
+        IncomeCalculator calc = new IncomeCalculator();
+
+        calc.readRevenues();
+        calc.readStaffExpenses();
+        calc.readOtherExpenses();
+
+        int net = calc.calculateNetIncome();
+
+        System.out.println("Net Income for this month: " + net);
+    }
+}
+```
+
+---
+
+## 🧩 What I Learned
+
+- Basic Java syntax
+- Console input (Scanner)
+- Arithmetic operations
+- Organizing code into multiple classes
+- Using methods to separate logic
+- Printing formatted output
+- Running Java apps with Gradle
+
+---
+
+## ▶️ Run Instructions
+
+**Build:**
+```
+./gradlew build
+```
+
+**Run:**
+```
+./gradlew run
+```
+
+If running manually:
+
+```
+javac Main.java
+java Main
+```
+
+---
+
+## 📄 Notes
+
+This project was originally created as part of Hyperskill’s beginner Java track and then structured more cleanly for GitHub.
